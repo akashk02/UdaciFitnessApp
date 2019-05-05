@@ -5,6 +5,8 @@ import AddEntry from './components/AddEntry'
 import reducer from './Reducers'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import FlexBox from './components/flexBox'
+import History from './components/History'
 
 export default class App extends React.Component {
 
@@ -20,8 +22,10 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={createStore(reducer)}>
-        <View >
-          <AddEntry></AddEntry>
+        <View style={{ flex: 1 }}>
+          {/*<FlexBox></FlexBox>*/}
+          {/*<AddEntry></AddEntry>*/}
+          <History></History>
         </View>
       </Provider>
     );
